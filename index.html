@@ -6,11 +6,11 @@
    for (i=0;i<=2;i++){
      var tmp = arr[i]
      console.log(tmp.substring(0,tmp.indexOf('=')+1))
-     if (tmp.substring(0,tmp.indexOf('=')+1) == "type"){
+     if (tmp.substring(0,tmp.indexOf('=')) == "type"){
        var type = tmp.substring(tmp.indexOf('=')+1,tmp.length)
-     } else if (tmp.substring(0,tmp.indexOf('=')+1) == "str"){
+     } else if (tmp.substring(0,tmp.indexOf('=')) == "str"){
        var str = tmp.substring(tmp.indexOf('=')+1,tmp.length)
-     } else if (tmp.substring(0,tmp.indexOf('=')+1) == "theme"){
+     } else if (tmp.substring(0,tmp.indexOf('=')) == "theme"){
        var theme = tmp.substring(tmp.indexOf('=')+1,tmp.length)
      }
    }
