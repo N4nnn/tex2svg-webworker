@@ -5,6 +5,7 @@
    var arr=str.split("&");
    for (i=0;i<=2;i++){
      var tmp = arr[i]
+     console.log(tmp.substring(0,tmp.indexOf('=')+1)
      if (tmp.substring(0,tmp.indexOf('=')+1) == "type"){
        var type = tmp.substring(tmp.indexOf('=')+1,tmp.length)
      } else if (tmp.substring(0,tmp.indexOf('=')+1) == "str"){
