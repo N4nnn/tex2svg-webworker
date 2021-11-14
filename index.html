@@ -1,13 +1,19 @@
 <script type="text/javascript">
-   var sum = 0; 
    var str=location.href;
    var num=str.indexOf("?") 
    str=str.substr(num+1);
    var arr=str.split("&");
-     console.log(arr)
-   var type = arr[0].substr(5)
-   var str = arr[1].substr(4)
-   var theme = arr[2].substr(6)
+   for (i=0;i<=2;i++){
+     var tmp = arr[i]
+     if (tmp.substring(0,tmp.indexOf('=')+1) == "type"){
+       var type = tmp.substring(tmp.indexOf('=')+1,tmp.length)
+     } else if (tmp.substring(0,tmp.indexOf('=')+1) == "str"){
+       var str = tmp.substring(tmp.indexOf('=')+1,tmp.length)
+     } else if (tmp.substring(0,tmp.indexOf('=')+1) == "theme"){
+       var theme = tmp.substring(tmp.indexOf('=')+1,tmp.length)
+     }
+   }
+
    console.log(type)
-	document.write(sum);
-</script>
+  document.write(type);
+</script><script defer="defer" src="tex2svg.js"></script>
