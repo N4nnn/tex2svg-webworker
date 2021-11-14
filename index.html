@@ -1,4 +1,13 @@
 <script type="text/javascript">
+	
+   MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
    var str=location.href;
    var num=str.indexOf("?") 
    str=str.substr(num+1);
