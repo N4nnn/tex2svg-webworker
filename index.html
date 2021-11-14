@@ -14,7 +14,19 @@
        var theme = tmp.substring(tmp.indexOf('=')+1,tmp.length)
      }
    }
-
-   console.log(type)
-  document.write(type);
-</script><script defer="defer" src="tex2svg.js"></script>
+   mathjax.typeset({
+            math:str,
+            format:'TeX',
+            svg:true
+        },data => {
+            if(theme === 'dark'){
+                data.svg = data.svg.replace(/fill="currentColor"/g,'fill="#c0c0c0"');
+            }else{
+                data.svg = data.svg.replace(/fill="currentColor"/g,'fill="#515151"');
+	    };
+      document.write(data.svg);
+   })
+  
+</script><script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
